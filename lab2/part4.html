@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+     <title>Template</title>
+     <style>
+         body
+         {
+            padding-left:250px;
+         }
+         #line
+         {
+             color:black;
+             font-size:25px;
+             margin: 0px;
+             padding-left:0px;
+         }
+         label
+         {
+            font-size:20px;
+            margin: 2px;
+            padding-bottom:50px;
+            padding-top:50px;
+         }
+
+         #jayaform1
+         {
+             width: 900px;
+             background-color: cadetblue;
+             border:2px solid rgb(78, 76, 76);
+             border-radius:0px;
+             height: 100px;
+             margin: 20px 20px 20px 125px;
+         }
+         .column {
+            float: left;
+            width: 20%;
+            padding: 0px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .column1{
+            float: left;
+            width: 16%;
+            padding: 0px;
+        }
+        .column2{
+            float: left;
+            width: 14%;
+            padding: 0px;
+        }
+        .column4{
+            float: left;
+            width: 29%;
+            padding: 0px;
+        }
+        .column5{
+            float: left;
+            width: 40%;
+            padding: 0px;
+        }
+     </style>
+
+    </head>
+    <body>
+<form>
+    <div id="jayaform1">
+        <div class="row">
+            <div class="column1">
+                <label><strong> Employer</strong></label>
+            </div>
+            <div class="column1">
+                <input name="vam" type="text" name=first size="10"/>
+            </div>
+                <div class="column2">
+                    <label><strong>customer</strong></label>
+
+                    </div>
+                    <div class="column1">
+                        <select id="mySelect" class="mdb-select md-form">
+                            <option value="online">option1</option>
+                            <option value="orange">America</option>
+                            <option value="pineapple">London</option>
+                            <option value="banana">Canada</option>
+                          </select>
+                    </div>
+                <div class="column1">
+                    <label><strong>Email</strong></label>
+                </div>
+                <div class="column2">
+                    <input name="vam" type="text" name=first size="25"/>
+                </div>
+          
+            </div>
+            <p> </p>
+
+                                <div class="row">
+                                    <div class="column1">
+                                        <label><strong>Local Address</strong></label>
+                                    </div>
+                                    <div class="column5">
+                                        <input name="vam" type="text" name=first size="25"/>
+                                    </div>
+                                        <div class="column">
+                                            <label><strong>phone 2</strong></label>
+                                        </div>
+                                        <div class="column1">
+                                            <input name="vam" type="text" name=first size="25"/>
+                                        </div>
+                                    </div>
+                                
+            
+</form>
+    </body>
+</html>
