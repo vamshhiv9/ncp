@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let names=[];
+let temp,i,j,minval;
+var input=prompt("Enter name to sort");
+while(input!=""){
+    names.push(input);
+    input=prompt("if u want to quit press ok or enter name");
+}
+
+names.sort()
+//Display
+document.write('Sorted names'+'<br/>');
+document.write('<hr/>');
+
+for (i=0; i< names.length; i++){
+if (names[i]!=null)
+    document.write(names[i]+'<br/>')
+}
+   </script>
+</body>
+</html>

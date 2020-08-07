@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image  map jaya vamshhi</title>
+    <script>
+        function redirect(){
+            window.open("3.1.html");
+        }
+
+        function text(){
+            document.getElementById('message').innerHTML='This is a my banner';
+        }
+
+        function untext(){
+            document.getElementById('message').innerHTML='';
+        }
+    </script>
+</head>
+<body>
+    <img src="banner11.png" usemap="#banner">
+
+    <map name="banner">
+        <area shape="rect" coords="3,3,484,167" onclick="redirect()" onmouseover="text()" onmouseout="untext()">      
+</map>
+
+<h2 id="message"></h2>
+
+</body>
+</html>
