@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaya vamshhi</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td>Enter Date of Birth in the format DD-MM-YYYY: </td>
+                <td><input type="text" id="dob" value="" placeholder="Enter a date"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        document.forms[0].addEventListener('submit', function (e) {
+            let today = new Date()
+            // console.log(today.getFullYear())
+
+            let inp = document.querySelector('#dob').value
+            let date = inp.split('-')
+            // js expects dates to be of the following format: yyyy-mm-dd
+            console.log('before')
+            let day = parseInt(date[0])
+            let month = parseInt(date[1])
+            let year = parseInt(date[2])
+            console.log('after')
+
+            if (day > 31) {
+                res ="wrong date" 
+            }
+            if(month>12) {
+                res = "wrong date"
+            }
+            else {
+                if (year > today.getFullYear() & month > today.getMonth()) {
+                    res = "wrong date"
+                } else if (year % 4 != 0 & month == 2 & day >= 29) {
+                    res = "wrong date"
+                } else {
+                    res = 'valid'
+                }
+            }
+            document.querySelector('#result').textContent = res
+            e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

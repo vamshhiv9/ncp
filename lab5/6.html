@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jay vamshhi</title>
+</head>
+
+<body>
+    <ul id="ul"></ul>
+
+    <script>
+        let arr = []
+
+        for (let i = 0; i < 5; i++) {
+            arr.push(prompt(`Enter mark ${i + 1}: `))
+        }
+
+        let ul = document.getElementById('ul')
+
+        for (let i = 0; i < arr.length; i++) {
+            li = document.createElement('li')
+            li.appendChild(document.createTextNode(mark(arr[i], i + 1)))
+            ul.appendChild(li)
+        }
+
+        function mark(x, s) {
+            if (x >= 90) {
+                return (`for ${x}, you got a A in subject ${s},`)
+            } else if (x >= 80) {
+                return (`for ${x}, you got a B in subject ${s},`)
+            } else if (x >= 70) {
+                return (`for ${x}, you got a C in subject ${s},`)
+            } else if (x >= 60) {
+                return (`for ${x}, you got a D in subject ${s},`)
+            } else {
+                return (`for ${x}, you got a F in subject ${s},`)
+            }
+        }
+    </script>
+</body>
+
+</html>
