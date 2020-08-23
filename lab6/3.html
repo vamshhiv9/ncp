@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.html</title>
+
+    <script>
+        document.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                generatePageNumber()
+            }
+        });
+        var small=[]
+        function indexdetails()
+        {
+            var chapter=document.getElementById("title").value
+            var num= document.getElementById("page").value
+
+            if(chapter==""||num=="")
+            {
+                alert("You have to enter both chapter tittle and page no");
+            }
+            else{
+                small.push({ chap: chapter, num: num })
+
+                small = small.sort(function (a, b) {
+                    return parseInt(a.num) - parseInt(b.num);
+                })
+                var op = ""
+                for (var i = 0; i < small.length; i++) {
+                    op += "<tr><td>"+(i+1)+"</td><td>"
+                    var length = small[i].chap.length
+                    op += small[i].chap
+                    for (var j = 0; j < (75 - (length + small[i].num.length)); j++) {
+                        op += ". "
+                    }
+                    op += "</td><td>"+small[i].num + "</td></tr><br>"
+                }
+                document.getElementById("list").innerHTML = op
+                document.getElementById("title").value=""
+                document.getElementById("title").select()
+                document.getElementById("page").value=""
+            }
+            
+        }
+    </script>
+    
+</head>
+<body>
+    <input type="text" placeholder="Enter chapter Tittle" name="title" id="title">
+    <input type="number" placeholder="Enter Page Number for the tittle" name="page" id="page" size="1000">
+    <input type="button" name="submit" id="submit" value="submit" onclick="indexdetails()" size="100">
+    <table style="table-layout: fixed;" id="list" >
+
+    </table>
+</body>
+</html>
