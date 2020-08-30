@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Examination Form</title>
+</head>
+
+
+<style>
+    body {
+        background-color: #ffff00;
+        font-weight: bold;
+        color:yellow;
+    }
+    .myclass{
+        background-color: #000 ;
+        margin-left: 100px;
+        margin-right: 270px;
+        margin-top: 0px;
+    }
+    table,
+    tr,
+    td {
+        width: 300px;
+        position: relative;
+        left: 160px;
+        padding: 15px;
+    }
+
+    #submit {
+        position: relative;
+        left: 350px;
+        width: 200px;
+        height: 30px;
+        color: yellow;
+        background-color: #000000;
+    }
+
+    #submit:hover {
+        background-color: yellow;
+        border: solid #000000 1px;
+        cursor: pointer;
+        color:black;
+    }
+
+    #exception td {
+        width: 500px;
+    }
+</style>
+
+
+<body>
+
+    <form action="" method="POST" class="myclass">
+
+        <h1 style="text-align: center;color:yellow;">Entrance examination application Form</h1>
+        <hr>
+
+        <table>
+            <div id="student-box1">
+                <tr>
+                    <td>Name of the student</td>
+                    <td><input type="text" name="sname-f" id="sname-f" placeholder="first name"></td>
+                    <td><input type="text" name="sname-m" id="sname-m" placeholder="middle name"></td>
+                    <td><input type="text" name="sname-l" id="sname-l" placeholder="last name"></td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td><select name="rel" id="rel">
+                            <option value="religion1">religion 1</option>
+                            <option value="religion2">religion 2</option>
+                            <option value="religion3">religion 3</option>
+                            <option value="religion4">religion 4</option>
+                        </select></td>
+                        <td>Nationality</td>
+                        <td><select name="snationality" id="snationality">
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="china">China</option>
+                                <option value="israel">Israel</option>
+                                <option value="england">England</option>
+                                <option value="pakistan">Pakistan</option>
+                                <option value="japan">Japan</option>
+                            </select></td>
+                </tr>
+                <tr>
+                    <td>Identification mark</td>
+                    <td>
+                        <textarea name="id-mark" id="id-mark" cols="30" rows="10"
+                            placeholder="enter any identification mark"></textarea>
+                    </td>
+                </tr>
+            </div>
+            <div id="perma-addr-box">
+                <tr>
+                    <td>Enter permanant address</td>
+                    <td><textarea name="paddress" id="paddress" cols="30" rows="10" placeholder="house number and name, street number and name, locality,
+                                city, State and zip code"></textarea></td>
+                    <td>Enter country of permanant address</td>
+                    <td><select name="countryp" id="countryp">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="china">China</option>
+                            <option value="israel">Israel</option>
+                            <option value="england">England</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="japan">Japan</option>
+                        </select></td>
+                </tr>
+            </div>
+            <div id="comm-addr-box">
+                <tr>
+                    <td>Enter communication address(if it is same as permanant address leave blank)</td>
+                    <td><textarea name="caddress" id="caddress" cols="30" rows="10" placeholder="house number and name, street number and name, locality,
+                                city, State and zip code"></textarea></td>
+                    <td>Enter country of communication address</td>
+                    <td><select name="countryc" id="countryc">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="china">China</option>
+                            <option value="israel">Israel</option>
+                            <option value="england">England</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="japan">Japan</option>
+                        </select></td>
+                </tr>
+            </div>
+
+            <div id="parent-box">
+                <tr>
+                    <td>Name of the parent</td>
+                    <td><input type="text" name="pname-f" id="pname-f" placeholder="first name"></td>
+                    <td><input type="text" name="pname-m" id="pname-m" placeholder="middle name"></td>
+                    <td><input type="text" name="pname-l" id="pname-l" placeholder="last name"></td>
+                </tr>
+
+                <tr>
+                    <td>Email address of parent</td>
+                    <td id="exception"><input type="text" name="pemail1" id="pemail1">
+                </tr>
+                <tr>
+                    <td>Education of parent</td>
+                    <td><textarea name="edqual" id="edqual" cols="30" rows="15"
+                            placeholder="please enter all the education institutions you've studied."></textarea></td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td><select name="occ" id="occ">
+                            <option value="occupation1">occupation 1</option>
+                            <option value="occupation2">occupation 2</option>
+                            <option value="occupation3">occupation 3</option>
+                            <option value="occupation4">occupation 4</option>
+                        </select></td>
+                </tr>
+            </div>
+
+            <div id="acadamic-box">
+                <tr>
+                    <td>Name of School</td>
+                    <td><input type="text" name="schoolname" id="schoolname"></td>
+                    <td>Register no</td>
+                    <td><input type="text" name="rno" id="rno"></td>
+                </tr>
+                <tr>
+                    <td>10th mark</td>
+                    <td><input type="number" name="tenth-mark" id="tenth-mark"></td>
+                    <td>12th mark</td>
+                    <td><input type="number" name="plus2-mark" id="plus2-mark"></td>
+                </tr>
+            </div>
+
+            <tr>
+                <td>Select age range of your child</td>
+                <td><select name="age" id="age">
+                        <option value="1">Adult</option>
+                        <option value="0">Above 10 and Below 18</option>
+                        <option value="0">Below 10</option>
+                    </select></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <div id="guardian-box">
+                <tr class="guard">
+                    <td>Enter guardian name</td>
+                    <td><input type="text" name="gname" id="gname"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="guard">
+                    <td>Guardian address</td>
+                    <td><textarea name="gaddress" id="gaddress" cols="30" rows="10" placeholder="house number and name, street number and name, locality,
+                                        city, State and zip code"></textarea></td>
+                    <td>Enter country of guardian</td>
+                    <td><select name="countryg" id="countryg">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="china">China</option>
+                            <option value="israel">Israel</option>
+                            <option value="england">England</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="japan">Japan</option>
+                        </select></td>
+                </tr>
+            </div>
+            <div id="gender-box">
+                <tr>
+                    <td>male</td>
+                    <td><input type="radio" id="male" name="gender" value="male"></td>
+                </tr>
+                <tr>
+                    <td>female</td>
+                    <td><input type="radio" id="female" name="gender" value="female"></td>
+                </tr>
+            </div>
+
+            <div id="dob-box">
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><select name="day" id="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select></td>
+                    <td><select name="month" id="month">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select></td>
+                    <td><select name="year" id="year">
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                        </select></td>
+                </tr>
+            </div>
+
+        </table>
+
+        <!-- form inputs below -->
+
+        <input type="submit" id="submit" value="Submit">
+
+    </form>
+
+    <h1 id="result"></h1>
+
+
+    <script>
+        // guardian initially none
+        document.forms[0].addEventListener('submit', function (e) {
+            // object containing values submitted from forms
+            d = {
+                "sfname": document.getElementById("sname-f").value //done
+                , "smname": document.getElementById("sname-m").value //done
+                , "slname": document.getElementById("sname-l").value //done
+                , "pfname": document.getElementById("pname-f").value //done
+                , "pmname": document.getElementById("pname-m").value //done
+                , "plname": document.getElementById("pname-l").value //done
+                , "rel": document.getElementById("rel").value
+                , "nationality": document.getElementById("snationality").value
+                , "id-mark": document.getElementById("id-mark").value //done
+                , "email1": document.getElementById("pemail1").value //done
+                , "email2": document.getElementById("pemail2").value //done
+                , "qual": document.getElementById("edqual").value //done
+                , "occup": document.getElementById("occ").value
+                , "paddr": document.getElementById("paddress").value //done
+                , "caddr": document.getElementById("caddress").value //done
+                , "countryp": document.getElementById("countryp").value //done
+                , "countryc": document.getElementById("countryc").value //done
+                , "schoolname": document.getElementById("schoolname").value
+                , "rno": document.getElementById("rno").value
+                , "10m": document.getElementById("tenth-mark").value
+                , "12m": document.getElementById("plus2-mark").value
+                , "agegr": document.getElementById("age").value //done
+                , "gname": document.getElementById("gname").value //done
+                , "gaddress": document.getElementById("gaddress").value //done
+                , "countryg": document.getElementById("countryg").value //done
+                , "day": document.getElementById("day").value
+                , "month": document.getElementById("month").value
+                , "year": document.getElementById("year").value
+                , "gender": getGender(document.getElementsByName("gender"))
+            }
+
+            // console.log(d)
+
+            let addressCheck = address(d["paddr"], d["countryp"], d["caddr"], d["countryc"])
+
+            let snamevalid = ValidName(d["sfname"], d["smname"], d["slname"])
+            let pnamevalid = ValidName(d["pfname"], d["pmname"], d["plname"])
+            let emailvalid = ValidateEmail(d["email1"], d["email2"])
+            let checkbid = notBlank(d["id-mark"])
+            let checkbq = notBlank(d["qual"])
+
+            console.log(d)
+
+            if (snamevalid & pnamevalid & emailvalid & checkbid & checkbq) {
+                if (GuardianNotNeeded(d["agegr"])) {
+                    if (notBlank(d["gname"]) == false | notBlank(d["gaddress"]) == false) {
+                        // alert("guardian details needed")
+                        document.getElementById('result').innerText = 'guardian details needed'
+                    } else {
+                        // alert("successfully submitted form")
+                        document.getElementById('result').innerText = 'successfully submitted form'
+                    }
+                }
+            }
+            else {
+                document.getElementById('result').innerText = 'please fill all the fields that are necessary'
+            }
+
+
+            e.preventDefault()
+        })
+
+        function notBlank(text) {
+            if (text.length == 0 | text.length < 4) {
+                return false
+            }
+            else {
+                return true
+            }
+        }
+
+        function address(a1, c1, a2, c2) {
+            if (notBlank(a1) == false) {
+                return false
+            } else {
+                return true
+            }
+        }
+
+        function GuardianNotNeeded(age) {
+            if (age != "1") {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function ValidName(fname, mname, lname) {
+            if (notBlank(fname) == false | notBlank(lname) == false) {
+                return false
+            } else {
+                return true
+            }
+        }
+
+        function getGender(gender) {
+            for (i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    return gender[i].value
+                }
+            }
+            return null
+        }
+
+        function ValidateEmail(mail1, mail2) {
+            if (/^\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail2)) {
+                if (/^\w+([\.-]?\w+)*$/.test(mail1)) {
+                    return true
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+            return false
+        }
+    </script>
+
+</body>
+
+</html>
